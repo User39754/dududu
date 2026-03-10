@@ -1,0 +1,39 @@
+# Market-1501 配置
+
+dataset:
+  name: Market-1501
+  root_dir: ./data/market1501
+  num_classes: 1501
+  height: 256
+  width: 128
+
+model:
+  name: TDAReIDModel
+  feature_dim: 2048
+  tda_dim: 50
+  
+training:
+  num_epochs: 150
+  batch_size: 64
+  learning_rate: 0.0003
+  weight_decay: 5e-4
+  lr_milestones: [30, 60, 90]
+  lr_gamma: 0.1
+  
+loss:
+  lambda_tda: 0.5
+  lambda_triplet: 0.5
+  margin: 0.3
+  
+evaluation:
+  eval_freq: 10
+  metric: cosine
+  
+logger:
+  log_dir: ./logs
+  checkpoint_freq: 10
+  
+misc:
+  seed: 42
+  num_workers: 4
+  device: cuda
