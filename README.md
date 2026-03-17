@@ -188,21 +188,6 @@ pd = extractor.compute_persistence_diagram(features)
 plot_persistence_diagram(pd, save_path='persistence.png')
 ```
 
-## 📝 论文写作建议
-
-### 主要贡献清单
-- [ ] 提出TDA作为ReID特征增强的新视角
-- [ ] 设计拓扑约束损失函数
-- [ ] 在3个主流数据集上验证效果
-- [ ] 提供可视化证明拓扑特征的有效性
-- [ ] 分析TDA与现有度量学习的关系
-
-### 实验清单
-- [ ] Ablation Study (逐个移除TDA模块)
-- [ ] 跨数据集泛化测试
-- [ ] 与SOTA方法对比
-- [ ] TDA参数敏感性分析
-- [ ] 计算复杂度分析
 
 ## 🚀 扩展方向
 
